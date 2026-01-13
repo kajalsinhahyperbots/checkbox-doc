@@ -43,13 +43,65 @@ All columns are defined in a single configuration object. Each column has:
 
 ```js
 const ALL_COLUMNS = [
-  { key: "customerName", label: "Customer Legal Name", required: true },
-  { key: "amountDue", label: "Amount Due", required: true },
-  { key: "invoices", label: "Invoices" },
-  { key: "status", label: "Customer Status" },
-  { key: "collector", label: "Assigned Collector" },
-  { key: "tags", label: "Tags" },
-  { key: "parentCompany", label: "Parent Company" },
-  { key: "country", label: "Country / Region" }
+  // ===== DEFAULT COLUMNS (REQUIRED) =====
+  {
+    key: "customerLegalName",
+    label: "Customer Legal Name",
+    required: true
+  },
+  {
+    key: "amountDue",
+    label: "Amount Due",
+    required: true
+  },
+  {
+    key: "invoices",
+    label: "Invoices",
+    required: true
+  },
+  {
+    key: "customerStatus",
+    label: "Customer Status",
+    required: true
+  },
+  {
+    key: "assignedCollector",
+    label: "Assigned Collector",
+    required: true
+  },
+
+  // ===== OPTIONAL METADATA COLUMNS =====
+  {
+    key: "tags",
+    label: "Tags",
+    required: false
+  },
+  {
+    key: "parentCompany",
+    label: "Parent Company",
+    required: false
+  },
+  {
+    key: "countryRegion",
+    label: "Country / Region",
+    required: false
+  },
+  {
+    key: "relationshipType",
+    label: "Relationship Type",
+    required: false
+  },
+  {
+    key: "language",
+    label: "Language",
+    required: false
+  },
+  {
+    key: "timezone",
+    label: "Timezone",
+    required: false
+  }
 ];
+
+
 
